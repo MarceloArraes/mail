@@ -102,7 +102,7 @@ function load_readmail(children1, email) {
         })
       })
       alert("Email Archived");
-      load_mailbox('inbox');
+      return load_mailbox('inbox');
     } else if (document.querySelector('#checkArquive').checked == false) {
       fetch('/emails/' + email.id, {
         method: 'PUT',
@@ -111,7 +111,7 @@ function load_readmail(children1, email) {
         })
       })
       alert("Email Unarchived");
-      load_mailbox('inbox');
+      return load_mailbox('inbox');
     }
   }
 
